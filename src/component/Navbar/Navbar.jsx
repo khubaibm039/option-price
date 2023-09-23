@@ -18,13 +18,16 @@ const Navbar = () => {
     ];
     return (
         <nav>
-            <div onClick={() => setOpen(!open)} className='md:hidden'>
+            <div onClick={() => setOpen(!open)} className='md:hidden p-4'>
                 {
-                    open === true ? <AiOutlineClose className='cursor-pointer text-2xl'></AiOutlineClose> : <HiMenuAlt1 className='text-2xl cursor-pointer'></HiMenuAlt1>
+                    open === true ?
+                        <AiOutlineClose className='cursor-pointer text-2xl'></AiOutlineClose>
+                        :
+                        <HiMenuAlt1 className='text-2xl cursor-pointer'></HiMenuAlt1>
                 }
 
             </div>
-            <ul className="md:flex gap-6  ">
+            <ul className={`md:flex justify-between gap-6 absolute md:static bg-yellow-300 p-6 shadow-lg duration-1000 ${open ? 'top-12' : '-top-60'}`}>
                 {
                     routes.map((route, idx) => <Link route={route} key={idx}></Link>)
                 }
