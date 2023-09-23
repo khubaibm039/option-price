@@ -27,7 +27,7 @@ const Navbar = () => {
                 }
 
             </div>
-            <ul className={`md:flex justify-between gap-6 absolute md:static bg-yellow-300 p-6 shadow-lg duration-1000 ${open ? 'top-12' : '-top-60'}`}>
+            <ul className={`md:flex justify-between absolute md:static bg-yellow-300 py-6 shadow-lg duration-1000 ${open ? 'top-12' : '-top-60'}`}>
                 {
                     routes.map((route, idx) => <Link route={route} key={idx}></Link>)
                 }
