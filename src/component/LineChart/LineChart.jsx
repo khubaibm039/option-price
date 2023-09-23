@@ -5,12 +5,6 @@ import {
     YAxis,
     BarChart,
     Bar,
-    Cell,
-    CartesianGrid,
-    Tooltip,
-    Legend,
-    LabelList,
-    ResponsiveContainer,
 } from 'recharts';
 
 const LineChart = () => {
