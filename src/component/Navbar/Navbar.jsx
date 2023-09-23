@@ -1,7 +1,8 @@
-// eslint-disable-next-line no-unused-vars
-import React, { useState } from 'react';
+
+import { useState } from 'react';
 import Link from '../Link/Link';
-import { AiOutlineMenu } from 'react-icons/ai';
+import { HiMenuAlt1 } from 'react-icons/hi';
+import { AiOutlineClose } from 'react-icons/ai';
 
 
 
@@ -17,8 +18,13 @@ const Navbar = () => {
     ];
     return (
         <nav>
-            <AiOutlineMenu className='text-2xl md:hidden'></AiOutlineMenu>
-            <ul className="md:flex gap-6">
+            <div onClick={() => setOpen(!open)} className='md:hidden'>
+                {
+                    open === true ? <AiOutlineClose className='cursor-pointer text-2xl'></AiOutlineClose> : <HiMenuAlt1 className='text-2xl cursor-pointer'></HiMenuAlt1>
+                }
+
+            </div>
+            <ul className="md:flex gap-6  ">
                 {
                     routes.map((route, idx) => <Link route={route} key={idx}></Link>)
                 }
