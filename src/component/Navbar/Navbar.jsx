@@ -32,6 +32,7 @@ const Navbar = () => {
                     routes.map((route, idx) => <Link route={route} key={idx}></Link>)
                 }
             </ul>
+            <div className={open ? 'red' : 'green'}></div>
         </nav>
     );
 };
